@@ -14,9 +14,15 @@ InstrumentDetailsView.prototype.bindEvents = function(){
 
 InstrumentDetailsView.prototype.render = function(instrumentObject){
   const infoParagraph = document.createElement('p');
-  infoParagraph.textContent = `Instrument: ${instrumentObject.name} Description: ${instrumentObject.description}`;
+  infoParagraph.textContent = `Instrument: ${instrumentObject.name}` ;
+  const infoParagraph2 = document.createElement('p');
+  infoParagraph2.textContent = `Description: ${instrumentObject.description}`;
+  const infoParagraph3 = document.createElement('p');
+  infoParagraph3.textContent = `List Of Musical Instruments: ${instrumentObject.instruments}`;
   this.container.innerHTML = '';
   this.container.appendChild(infoParagraph);
+  this.container.appendChild(infoParagraph2);
+  this.container.appendChild(infoParagraph3);
 };
 
 
